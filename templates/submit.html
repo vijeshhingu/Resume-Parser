@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Parser</title>
+</head>
+<style>
+    body {
+        background-color: #f4f7fc;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        text-align: center; /* Center align the text in the body */
+    }
+
+    h1, h2, h4 {
+        color: #007BFF;
+        text-align: center; /* Center align the headings */
+    }
+
+    p {
+        color: #333;
+        text-align: center; /* Center align paragraphs */
+    }
+
+    nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+    nav a {
+        text-decoration: none;
+        color: #3498db;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        background-color: #fff;
+        transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+        background-color: #3498db;
+        color: #fff;
+    }
+
+    /* Form styling */
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: left; /* Center align the form contents */
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+</style>
+
+</style>
+<body>
+    <h1>Resume Parser</h1>
+    <nav>
+        <a href="{{url_for('review')}}" >Review submissions</a>
+    </nav>
+    <p>---------------------------------------------------------------</p>
+
+    <h2>Step 1: Enter Keywords</h2>
+    <p>Enter individually or as a space-separated list.</p>
+    <form method="POST" enctype="multipart/form-data">
+        <p><input type="text" name="kw"/></p>
+        <p><input type="submit" value="Submit"/></p>
+    </form>
+
+    <h4>Keywords</h4>
+        <ul>
+            {% for word in keywords %}
+                <li><input type='hidden'>{{ word }}</li>
+            {% endfor %}
+        </ul>
+        <form method="POST"enctype="multipart/form-data">
+            <input type="submit" name="r" value="Reset"/>
+        </form>
+
+    <p>---------------------------------------------------------------</p>
+    <h2>Step 2: Upload Resume (.pdf only)</h2>
+    <form method='POST' enctype='multipart/form-data'>
+        {{form.hidden_tag()}}
+        {{form.file()}}
+        {{form.submit()}}
+        <p>{{ uploadResult }}</p>
+    </form>
+
+    <p>---------------------------------------------------------------</p>
+    <h2>Step 3: Parse and Score Resume</h2>
+    <form method='POST' enctype='multipart/form-data'>
+        <input type="submit" name="p" value="Parse"/>
+        <p>{{ errorMessage }}</p>
+        <p>{{ scoreMessage }}</p>
+        <p>{{ matchesMessage }}</p>
+    </form>
+
+    <p>---------------------------------------------------------------</p>
+    <h3><a href="{{url_for('home')}}">Go back to Home</a></h3>
+
+
+</body>
+<br><br><br>
+</html>

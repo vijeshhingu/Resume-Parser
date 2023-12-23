@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./static/global.css" />
+    <link rel="stylesheet" href="./static/Home.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Itim:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <div class="resumephy">
+      <div class="span11"></div>
+      <div class="span12"></div>
+      <div class="span13"></div>
+      <div class="light-bar2"></div>
+      <div class="visuals4">
+        <div class="mask-frame6">
+          <b class="resumephy1">ResumePhy</b>
+          <div class="your-personalized-resume">
+            Your personalized Resume Builder
+          </div>
+          <img class="emoji-icon" alt="" src="./static/public/emoji@2x.png" />
+
+          <div class="rectangle-parent">
+            <div class="group-child"></div>
+            {% if current_user.is_authenticated %}
+              <b class="login2"><a style="color: White; text-decoration: None;" href="{{ url_for('logout') }}">Log Out</a></b>
+              <div class="group-item"></div>
+              <b class="sign-up3"><a style="color: White; text-decoration: None;" href="{{ url_for('donate') }}">Donate</a></b>
+            {% else %}
+              <b class="login2"><a style="color: White; text-decoration: None;" href="{{ url_for('login') }}">Log In</a></b>
+              <div class="group-item"></div>
+              <b class="sign-up3"><a style="color: White; text-decoration: None;" href="{{ url_for('signup') }}">Sign Up</a></b>
+            {% endif %}
+          </div>
+          <div class="things-to-do">
+            <div class="checkbox">
+              <img
+                class="checkbox-default"
+                alt=""
+                src="./static/public/checkbox--default.svg"
+              />
+
+              <div class="text3">to-do item</div>
+            </div>
+            <div class="text4" style="margin-bottom: 25px;">Services we offer:</div>
+            <div class="checkbox1">
+
+              <div class="text3"><a style="color: White; text-decoration: None;" href="{{ url_for('resumemaker') }}">Resume Maker</a></div>
+            </div>
+            <div class="checkbox2">
+              <img
+                class="checkbox-checked"
+                alt=""
+                src="./static/public/checkbox--checked.svg"
+              />
+
+              <div class="text6"><a style="color: White; text-decoration: None;" href="{{ url_for('resumemaker') }}">Resume Maker</a></div>
+            </div>
+            <div class="checkbox3">
+              <img
+                class="checkbox-checked"
+                alt=""
+                src="./static/public/checkbox--checked1.svg"
+              />
+
+              <div class="text6"><a style="color: White; text-decoration: None;" href="{{ url_for('submit') }}">Resume Parser</a></div>
+            </div>
+          </div>
+          <div class="navbar-026">
+            <div class="about-us6"><a style="color: White; text-decoration: None;" href="{{ url_for('aboutus') }}">About Us</a></div>
+            <div class="products7"><a style="color: White; text-decoration: None;" href="{{ url_for('products') }}">Products</a></div>
+            <div class="home6"><a style="color: White; text-decoration: None;" href="{{ url_for('home') }}">Home</a></div>
+            <div class="navbar-02-child3"></div>
+            <div class="privacy-policy6"><a style="color: White; text-decoration: None;" href="{{ url_for('privacypolicy') }}">Privacy Policy</a></div>
+            <div class="platform7"><a style="color: White; text-decoration: None;" href="{{ url_for('platform') }}">Platform</a></div>
+          </div>
+          <div class="footer15"></div>
+          <div class="all-rights-reserved14">© 2023 All Rights Reserved</div>
+          <div class="footer15"></div>
+          <div class="all-rights-reserved15">© 2023 All Rights Reserved</div>
+          <div class="button">
+            <div class="text6"><a style="color: White; text-decoration: None;" href="{{ url_for('contactus') }}">Contact Us</a></div>
+          </div>
+          <div class="mask-frame-child11"></div>
+        </div>
+      </div>
+      <div class="pages">
+        <div class="us-letter-2">
+          <div class="header">
+            <div class="contact">
+              <div class="cta-1">
+                <a class="get-in-touch" href="http://gmail.com" target="_blank"
+                  >Get in touch</a
+                >
+              </div>
+              <div class="div9">(555) 555-1234</div>
+            </div>
+            <div class="quick-personal-info">
+              <div class="name-job-title">
+                <b class="jason-mayfield-jr">Jason Mayfield Jr., 25</b>
+                <div class="jason-mayfield-jr">Remote product designer</div>
+              </div>
+              <img class="picture-icon" alt="" src="./static/public/picture@2x.png" />
+            </div>
+          </div>
+          <div class="us-letter-2-child"></div>
+          <div class="notification">
+            <b class="text6">2</b>
+          </div>
+          <div class="col-left">
+            <div class="intro">
+              <div class="intro-text">
+                <b class="jason-mayfield-jr">Hello, I’m Jason! 👋</b>
+                <div class="a-remote-product">
+                  A remote product designer from San Francisco, CA. I focus in
+                  crafting beautiful experiences through visual design.
+                </div>
+              </div>
+              <div class="ctas">
+                <div class="cta-11">
+                  <a
+                    class="get-in-touch"
+                    href="http://dribbble.com"
+                    target="_blank"
+                    >View my portfolio</a
+                  >
+                </div>
+                <div class="cta-2">
+                  <a
+                    class="get-in-touch"
+                    href="http://twitter.com"
+                    target="_blank"
+                    >Website</a
+                  >
+                </div>
+                <div class="cta-3">
+                  <a
+                    class="get-in-touch"
+                    href="http://linktr.ee"
+                    target="_blank"
+                    >Linktree</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="education">
+              <b class="education1">Education</b>
+              <div class="intro-text">
+                <div class="title-info">
+                  <b class="bachelor-of-fine">Bachelor of fine arts</b>
+                  <div class="bachelor-of-fine">
+                    New York University / New York, NY / 2014 – 2018
+                  </div>
+                </div>
+                <div class="graduated-magna-cum">
+                  Graduated magna cum laude.
+                </div>
+              </div>
+              <div class="intro-text">
+                <div class="title-info">
+                  <b class="bachelor-of-fine">High school diploma</b>
+                  <div class="bachelor-of-fine">
+                    Kent Higher Secondary school / Pontiac, MI / Class of 2014
+                  </div>
+                </div>
+                <div class="graduated-magna-cum">
+                  Class valedictorian, chess club chair.
+                </div>
+              </div>
+            </div>
+            <div class="education">
+              <b class="education1">Work experience</b>
+              <div class="intro-text">
+                <div class="title-info">
+                  <b class="bachelor-of-fine">Square</b>
+                  <div class="bachelor-of-fine">
+                    Sr. Product designer / New york, NY / 2020 – Present
+                  </div>
+                </div>
+                <div class="graduated-magna-cum">
+                  Front-end design for the Square and Cash App.
+                </div>
+              </div>
+              <div class="intro-text">
+                <div class="title-info">
+                  <b class="bachelor-of-fine">Uber</b>
+                  <div class="bachelor-of-fine">
+                    Jr. Product designer / San francisco, cA / 2018 – 2020
+                  </div>
+                </div>
+                <div class="graduated-magna-cum">
+                  Involved in building the points and credit system with the
+                  Uber design team.
+                </div>
+              </div>
+              <div class="intro-text">
+                <div class="title-info">
+                  <b class="bachelor-of-fine">Meta (Prev. Facebook)</b>
+                  <div class="bachelor-of-fine">
+                    Design intern / Palo Alto, cA / 2017 – 2018
+                  </div>
+                </div>
+                <div class="involved-in-building1">
+                  Involved in building the points and credit system with the
+                  Uber design team.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="skills">
+              <b class="education1">Skills</b>
+              <div class="title-description5">
+                <div class="product-design-ui-container">
+                  <ul class="product-design-ui-ux-web-dev">
+                    <li class="product-design">Product design</li>
+                    <li class="product-design">UI / UX</li>
+                    <li class="product-design">Web development</li>
+                    <li>Animation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="skills">
+              <b class="education1">Tools</b>
+              <div class="title-description5">
+                <div class="product-design-ui-container">
+                  <ul class="product-design-ui-ux-web-dev">
+                    <li class="product-design">Figma / FigJam</li>
+                    <li class="product-design">Adobe Photoshop</li>
+                    <li class="product-design">Adobe Illustrator</li>
+                    <li class="product-design">Adobe After Effects</li>
+                    <li>Webflow</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="skills">
+              <b class="education1">Interests</b>
+              <div class="title-description5">
+                <div class="product-design-ui-container">
+                  <ul class="product-design-ui-ux-web-dev">
+                    <li class="product-design">Kayaking</li>
+                    <li>Longboarding</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="intro-text">
+              <div class="mini-footer-child"></div>
+              <div class="flags">
+                <div class="usa">
+                  <div class="stripes">
+                    <div class="stripes-child"></div>
+                    <div class="stripes-child"></div>
+                    <div class="stripes-child"></div>
+                    <div class="stripes-child"></div>
+                  </div>
+                  <div class="stars"></div>
+                </div>
+                <div class="fra">
+                  <div class="stars1"></div>
+                  <div class="stars2"></div>
+                  <div class="stars3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="us-letter-2-item"></div>
+          <div class="footer17">
+            <div class="text6">c. 2022 – Present / Jason Mayfield Jr.</div>
+            <div class="digital-rsum-print">
+              Digital résumé. Print only if necessary. 🌱
+            </div>
+          </div>
+        </div>
+        <div class="us-letter-1">
+          <div class="header1">
+            <div class="contact">
+              <div class="cta-1">
+                <a class="get-in-touch" href="http://gmail.com" target="_blank"
+                  >Get in touch</a
+                >
+              </div>
+              <div class="div9">(555) 555-1234</div>
+            </div>
+            <div class="quick-personal-info1">
+              <div class="name-job-title">
+                <b class="jason-mayfield-jr">Jason Mayfield Jr., 25</b>
+                <div class="jason-mayfield-jr">Remote product designer</div>
+              </div>
+              <img class="picture-icon" alt="" src="./static/public/picture1@2x.png" />
+            </div>
+          </div>
+          <div class="notification1">
+            <b class="text6">2</b>
+          </div>
+          <div class="col-left">
+            <div class="intro">
+              <div class="intro-text">
+                <b class="jason-mayfield-jr">Hello, I’m Jason! 👋</b>
+                <div class="a-remote-product">
+                  A remote product designer from San Francisco, CA. I focus in
+                  crafting beautiful experiences through visual design.
+                </div>
+              </div>
+              <div class="ctas1">
+                <div class="cta-11">
+                  <a
+                    class="get-in-touch"
+                    href="http://dribbble.com"
+                    target="_blank"
+                    >View my portfolio</a
+                  >
+                </div>
+                <div class="cta-2">
+                  <a
+                    class="get-in-touch"
+                    href="http://twitter.com"
+                    target="_blank"
+                    >Website</a
+                  >
+                </div>
+                <div class="cta-3">
+                  <a
+                    class="get-in-touch"
+                    href="http://linktr.ee"
+                    target="_blank"
+                    >Linktree</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="education2">
+              <b class="education1">Education</b>
+              <div class="intro-text">
+                <div class="title-info">
+                  <b class="bachelor-of-fine">Bachelor of fine arts</b>
+                  <div class="bachelor-of-fine">
+                    New York University / New York, NY / 2014 – 2018
+                  </div>
+                </div>
+                <div class="graduated-magna-cum">
+                  Graduated magna cum laude.
+                </div>
+              </div>
+              <div class="intro-text">
+                <div class="title-info">
+                  <b class="bachelor-of-fine">High school diploma</b>
+                  <div class="bachelor-of-fine">
+                    Kent Higher Secondary school / Pontiac, MI / Class of 2014
+                  </div>
+                </div>
+                <div class="graduated-magna-cum">
+                  Class valedictorian, chess club chair.
+                </div>
+              </div>
+            </div>
+            <div class="education2">
+              <b class="education1">Work experience</b>
+              <div class="intro-text">
+                <div class="title-info">
+                  <b class="bachelor-of-fine">Square</b>
+                  <div class="bachelor-of-fine">
+                    Sr. Product designer / New york, NY / 2020 – Present
+                  </div>
+                </div>
+                <div class="graduated-magna-cum">
+                  Front-end design for the Square and Cash App.
+                </div>
+              </div>
+              <div class="intro-text">
+                <div class="title-info">
+                  <b class="bachelor-of-fine">Uber</b>
+                  <div class="bachelor-of-fine">
+                    Jr. Product designer / San francisco, cA / 2018 – 2020
+                  </div>
+                </div>
+                <div class="graduated-magna-cum">
+                  Involved in building the points and credit system with the
+                  Uber design team.
+                </div>
+              </div>
+              <div class="intro-text">
+                <div class="title-info">
+                  <b class="bachelor-of-fine">Meta (Prev. Facebook)</b>
+                  <div class="bachelor-of-fine">
+                    Design intern / Palo Alto, cA / 2017 – 2018
+                  </div>
+                </div>
+                <div class="involved-in-building3">
+                  Involved in building the points and credit system with the
+                  Uber design team.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-right1">
+            <div class="skills2">
+              <b class="education1">Skills</b>
+              <div class="title-description5">
+                <div class="product-design-ui-container">
+                  <ul class="product-design-ui-ux-web-dev">
+                    <li class="product-design">Product design</li>
+                    <li class="product-design">UI / UX</li>
+                    <li class="product-design">Web development</li>
+                    <li>Animation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="skills2">
+              <b class="education1">Tools</b>
+              <div class="title-description5">
+                <div class="product-design-ui-container">
+                  <ul class="product-design-ui-ux-web-dev">
+                    <li class="product-design">Figma / FigJam</li>
+                    <li class="product-design">Adobe Photoshop</li>
+                    <li class="product-design">Adobe Illustrator</li>
+                    <li class="product-design">Adobe After Effects</li>
+                    <li>Webflow</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="skills2">
+              <b class="education1">Interests</b>
+              <div class="title-description5">
+                <div class="product-design-ui-container">
+                  <ul class="product-design-ui-ux-web-dev">
+                    <li class="product-design">Kayaking</li>
+                    <li>Longboarding</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="intro-text">
+              <div class="mini-footer-item"></div>
+              <div class="flags">
+                <div class="usa">
+                  <div class="stripes">
+                    <div class="stripes-child"></div>
+                    <div class="stripes-child"></div>
+                    <div class="stripes-child"></div>
+                    <div class="stripes-child"></div>
+                  </div>
+                  <div class="stars"></div>
+                </div>
+                <div class="fra">
+                  <div class="stars1"></div>
+                  <div class="stars2"></div>
+                  <div class="stars3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="pages-child" alt="" src="./static/public/line-12.svg" />
+      </div>
+    </div>
+  </body>
+</html>

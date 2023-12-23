@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 10% auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h2, h4 {
+            text-align: center;
+            color: #007BFF; /* Blue color similar to the provided website */
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            background-color: #fff;
+            border: 1px solid #007BFF;
+            border-radius: 4px;
+            color: #333;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container login-container">
+        <h2>Login</h2>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <p>{{ form.username.label }}<br>{{ form.username() }}</p>
+            <p>{{ form.password.label }}<br>{{ form.password() }}</p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </div>
+</body>
+</html>

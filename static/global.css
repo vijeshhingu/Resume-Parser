@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-roboto: Roboto;
+  --font-itim: Itim;
+  --font-inter: Inter;
+  --font-montserrat: Montserrat;
+  --font-nunito: Nunito;
+  --font-inherit: inherit;
+  --font-rubik: Rubik;
+
+  /* font sizes */
+  --font-size-21xl: 40px;
+  --font-size-4xl: 23px;
+  --font-size-mini: 15px;
+  --font-size-14xl: 33px;
+  --font-size-5xl: 24px;
+  --font-size-xl: 20px;
+  --font-size-13xl: 32px;
+  --font-size-29xl: 48px;
+  --font-size-9xl: 28px;
+  --font-size-lg: 18px;
+  --font-size-xs: 12px;
+  --font-size-8xl: 27px;
+  --font-size-45xl: 64px;
+  --font-size-12xl-4: 31.4px;
+  --font-size-4xs: 9px;
+  --font-size-base: 16px;
+  --font-size-17xl: 36px;
+
+  /* Colors */
+  --color-black: #000;
+  --cold-grey-white: #fff;
+  --color-gray-100: #1e1e20;
+  --color-gray-200: #151e23;
+  --color-gray-300: #0a0a0a;
+  --color-gray-400: #050505;
+  --color-gray-500: #040404;
+  --color-gray-600: rgba(255, 255, 255, 0.51);
+  --color-steelblue: #1a7fc1;
+  --color-deepskyblue-100: #3bbbfa;
+  --color-deepskyblue-200: #29abe2;
+  --color: #f6e05e;
+  --color-midnightblue: rgba(0, 2, 75, 0.5);
+  --color-mediumslateblue: #6d51e4;
+  --color-lightsalmon: #fdaf81;
+  --color-whitesmoke-100: #efefef;
+  --color-whitesmoke-200: #eee;
+  --color-silver: #c4c4c4;
+  --color-orangered: #f24e1e;
+  --color-cornflowerblue: #699bf7;
+  --color-dimgray: #545454;
+  --color-lightgreen: #a9e372;
+  --color-burlywood: #e5bd8e;
+  --color-paleturquoise: #9ee5e1;
+  --color-darkgray: #b2b2b2;
+  --color-plum: #bfaee5;
+  --color-darkslategray-100: #3a454e;
+  --color-darkslategray-200: #333;
+  --colors-bluedark: #0a84ff;
+
+  /* Gaps */
+  --gap-mini: 15px;
+  --gap-5xs: 8px;
+  --gap-xl: 20px;
+  --gap-3xs: 10px;
+  --gap-11xs: 2px;
+  --gap-5xl: 24px;
+  --gap-xs: 12px;
+
+  /* Paddings */
+  --padding-smi: 13px;
+  --padding-304xl: 323px;
+  --padding-lg: 18px;
+  --padding-186xl: 205px;
+  --padding-mini: 15px;
+  --padding-174xl: 193px;
+  --padding-3xs: 10px;
+  --padding-base: 16px;
+  --padding-10xs: 3px;
+  --padding-5xs: 8px;
+
+  /* Border radiuses */
+  --br-mini: 15px;
+  --br-26xl: 45px;
+  --br-106xl: 125px;
+  --br-base: 16px;
+  --br-81xl: 100px;
+  --br-11xs-5: 1.5px;
+  --br-xs: 12px;
+  --br-lg: 18px;
+  --br-xl: 20px;
+}
+
+/* Style for the flashes container */
+ul.flashes {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Style for individual flash messages */
+ul.flashes li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 4px;
+}
+
+/* Success flash message */
+ul.flashes li.flash-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+/* Error flash message */
+ul.flashes li.flash-error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* Info flash message */
+ul.flashes li.flash-info {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+
+/* Warning flash message */
+ul.flashes li.flash-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}

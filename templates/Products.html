@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./static/global.css" />
+    <link rel="stylesheet" href="./static/Products.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Itim:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="products4">
+      <div class="products-child"></div>
+      <div class="footer10"></div>
+      <div class="navbar-024">
+        <div class="about-us4">About Us</div>
+        <div class="products5">Products</div>
+        <div class="home4">Home</div>
+        <div class="navbar-02-child1"></div>
+        <div class="privacy-policy4">Privacy Policy</div>
+        <div class="platform5">Platform</div>
+        <div class="navbar-025">
+          <div class="about-us5"><a style="color: White; text-decoration: None;" href="{{ url_for('aboutus') }}">About Us</a></div>
+          <div class="products6"><a style="color: White; text-decoration: None;" href="{{ url_for('products') }}">Products</a></div>
+          <div class="home4"><a style="color: White; text-decoration: None;" href="{{ url_for('home') }}">Home</a></div>
+          <div class="navbar-02-child2"></div>
+          <div class="privacy-policy5"><a style="color: White; text-decoration: None;" href="{{ url_for('privacypolicy') }}">Privacy Policy</a></div>
+          <div class="platform6"><a style="color: White; text-decoration: None;" href="{{ url_for('platform') }}">Platform</a></div>
+        </div>
+      </div>
+      <div class="products-item"></div>
+      <b class="resume-parser2">RESUME PARSER</b>
+      <b class="tired-of-going-container">
+        <p class="tired-of-going">
+          Tired of going through thousands of resumes as a recruiter ?
+        </p>
+        <p class="use-our-resume">
+          Use our resume parser to find the perfect applicants based on your
+          requirements.
+        </p>
+      </b>
+      <div class="products-inner"></div>
+      <img class="rectangle-icon" alt="" src="./static/public/rectangle-16.svg" />
+
+      <b class="try-it-here"><a style="color: White; text-decoration: None;" href="{{ url_for('submit') }}">TRY IT HERE</a></b>
+      <div class="products-child1"></div>
+      <div class="products-child2"></div>
+      <b class="resume-maker2">RESUME MAKER</b>
+      <b class="get-your-dream-container">
+        <p class="tired-of-going">
+          Get your dream job by making an amazing resume.
+        </p>
+        <p class="use-our-resume">Thousands of templates for you to use.</p>
+      </b>
+      <div class="products-child3"></div>
+      <b class="try-it-here1"><a style="color: White; text-decoration: None;" href="{{ url_for('resumemaker') }}">TRY IT HERE</a></b>
+      <div class="all-rights-reserved10">© 2023 All Rights Reserved</div>
+    </div>
+  </body>
+</html>

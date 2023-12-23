@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Maker</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Resume Maker</h1>
+        </div>
+        <div class="resume-section">
+            <form method="POST" action="/generateresume">
+                <h2>Personal Information</h2>
+                <label for="name">Full Name:</label>
+                <input type="text" name="name">
+                <label for="email">Email:</label>
+                <input type="email" name="email">
+                <label for="phone">Phone Number:</label>
+                <input type="text" name="phone">
+                <label for="summary">Summary:</label>
+                <textarea name="summary" rows="4" cols="50"></textarea>
+                
+                <h2>Work Experience</h2>
+                <div id="experience-fields">
+                    <div class="experience-field">
+                        <label for="title">Title:</label>
+                        <input type="text" name="titles[]">
+                        <label for="company">Company:</label>
+                        <input type="text" name="companies[]">
+                        <label for="start_date">Start Date:</label>
+                        <input type="text" name="start_dates[]">
+                        <label for="end_date">End Date:</label>
+                        <input type="text" name="end_dates[]">
+                        <label for="description">Description:</label>
+                        <textarea name="descriptions[]" rows="4" cols="50"></textarea>
+                    </div>
+                </div>
+                
+                <button type="button" id="add-experience">Add Experience</button>
+                <input type="submit" value="Generate Resume">
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('add-experience').addEventListener('click', function(e) {
+            e.preventDefault();
+            var experienceFields = document.getElementById('experience-fields');
+            var clone = experienceFields.querySelector('.experience-field').cloneNode(true);
+            var inputs = clone.querySelectorAll('input, textarea');
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].value = '';
+            }
+            experienceFields.appendChild(clone);
+        });
+    </script>
+</body>
+</html>

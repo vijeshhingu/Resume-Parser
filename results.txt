@@ -1,0 +1,5 @@
+50.0%		
+	FILEPATH: C:\Users\iyers\Desktop\ResumePhy\static/files\surajiyer_resume.pdf		
+	KEYWORDS: ['react', 'golang', 'c', 'django', 'flask', 'javascript']		
+	MATCHES: ['c', 'django', 'flask']		
+
